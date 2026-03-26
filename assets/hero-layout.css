@@ -1,0 +1,44 @@
+/* Final pass after custom.css — hero stack stays centered (wins over theme overrides) */
+.hero {
+    text-align: center !important;
+}
+
+.hero .hero-content {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+.hero .hero-actions {
+    justify-content: center !important;
+}
+
+.hero .hero-subtitle {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+.hero--split .hero-content {
+    text-align: center !important;
+}
+
+.hero--split .hero-actions {
+    justify-content: center !important;
+}
+
+/* No right-side corner art on split hero (custom themes often use .hero::after) */
+.hero.hero--split::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Legacy HTML may still include .hero-decoration — hide it */
+.hero--split .hero-decoration {
+    display: none !important;
+}
+
+/* Narrow readable column, perfectly centered */
+.hero.hero--split .hero-content {
+    max-width: 700px !important;
+}
